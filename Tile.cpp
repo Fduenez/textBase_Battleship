@@ -15,7 +15,6 @@ Tile::Tile()
     isShip = false;
     isHit = false;
     icon = '#';
-    isShipVisible = true;
 }
 Tile::Tile(int x, int y, bool isShip,bool isHit,char icon)
 {
@@ -43,17 +42,9 @@ Tile::Tile(int x, int y, bool isShip,bool isHit,char icon)
 //}
 void Tile::setIcon(char icon)
 {
-    if(icon == '*' || icon == 'X' || icon == 'o' || icon == '#')
+    if(icon == '*' || icon == 'X' || icon == 'o' )
     {
         this->icon = icon;
-    }
-}
-void Tile::setIsShipVisible(bool is_visible)
-{
-    isShipVisible = is_visible;
-    if(isShipVisible)
-    {
-       icon = 'X';
     }
 }
 void Tile::reset()

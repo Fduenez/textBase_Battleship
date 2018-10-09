@@ -6,8 +6,8 @@
 //  Copyright © 2018 Frank Duenez. All rights reserved.
 //
 
-#ifndef Ships_h
-#define Ships_h
+#ifndef SHIP_H
+#define SHIP_H
 
 #include <iostream>
 #include <string>
@@ -16,23 +16,23 @@ using namespace std;
 
 class Ships{
 private:
-    
+
     string ship_type;
-    
+
     int length;
     int health;
-    
+
     bool is_destroyed;
-    
+
 public:
-    
+
     Ships();
     Ships(string ship_type,int length, int health);
-    
+
     void set_length(int length){this -> length = length;}
     void set_health(int health){this -> health = health;}
     void set_destroyed(bool is_destroyed){this -> is_destroyed = is_destroyed;}
-    
+
     int get_length(){return length;}
     int get_health(){return health;}
     bool set_destroyed(){return is_destroyed;}
